@@ -7,8 +7,7 @@ COPY --from=builder /home/filexp /usr/app
 
 WORKDIR /usr/app
 
-RUN echo "Hello World" > index.html && \
-  apk add python3 && \
+RUN  apk add python3 && \
   rm -rf /tmp/* && \
   rm -rf /var/cache/* && \
   mv config.sample.json config.json
